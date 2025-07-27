@@ -1,0 +1,95 @@
+{
+  "scenarios":
+    {
+      "Successful":[
+        {
+          "id": 1245,
+          "name": "Jessi",
+          "category": {
+            "id": 45,
+            "name": "Dogs"
+          },
+          "photoUrls": [
+            "https:jhasdlfkjnasd/jhsbdcjkhsdvc/123221.jpg", "https:jhasdlfkjnasd/jhsbdcjkhsdvc/123225.jpg"
+          ],
+          "tags": [
+            {
+              "id": 65456,
+              "name": "Poodle"
+            },
+            {
+              "id": 45646,
+              "name": "Small"
+            }
+          ],
+          "status": ["available", "pending", "sold"]
+        },
+        {
+          "id": 145123,
+          "name": "Candace",
+          "category": {
+            "id": 56,
+            "name": "Cats"
+          },
+          "photoUrls": [
+            "https:jhasdlfkjnasd/jhsbdcjkhsdvc/123245.jpg", "https:jhasdlfkjnasd/jhsbdcjkhsdvc/3225.jpg"
+          ],
+          "tags": [
+            {
+              "id": 9456,
+              "name": "StrayCats"
+            },
+            {
+              "id": 495357,
+              "name": "Calico"
+            }
+          ],
+          "status": ["available", "pending", "sold"]
+        }
+      ],
+      "Failed":[
+        {
+          "id": "1245",
+          "name": 545465465,
+          "category": {
+            "id": "45",
+            "name": 455465
+          },
+          "photoUrls": [
+            "jhasdlfkjnasd/jhsbdcjkhsdvc/123221.jpg", "https:jhasdlfkjnasd/jhsbdcjkhsdvc/123225"
+          ],
+          "tags": [
+            {
+              "id": true,
+              "name": "Poodle4"
+            },
+            {
+              "id": false,
+              "name": ["actually", "error"]
+              }
+          ],
+          "status": [true, 1, "sold7"]
+        },
+        {
+          "id": false,
+          "name": ["candace", "error"],
+          "category": {
+            "id": 56.01,
+            "name": "//Cats*-+/'*"
+          },
+          "photoUrls": "https:jhasdlfkjnasd/jhsbdcjkhsdvc/3225.jpg",
+          "tags": [
+            {
+              "id": -9456,
+              "name": "StrayCats--**;;'''"
+            },
+            {
+              "id": -495.357,
+              "name": "Calico@@.«◘>┼!684:◄Tñ"
+            }
+          ],
+          "status": [95, -5, false]
+        }
+      ]
+    }
+}

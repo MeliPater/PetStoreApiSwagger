@@ -1,6 +1,5 @@
 package com.petstore.models;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.List;
 

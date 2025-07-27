@@ -1,8 +1,10 @@
 package com.petstore.stepDefinitions;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.petstore.interactions.healthCheck;
 import com.petstore.questions.verifyAddedPet;
 import com.petstore.tasks.addPet;
+import com.petstore.utils.TestDataLoader;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -37,6 +39,7 @@ public class petSteps {
     }
     @When("i add a new pet in the store")
     public void i_add_a_new_pet_in_the_store() {
+        JsonNode data = TestDataLoader.getRandomBody("Successful");
         actor.attemptsTo(
                 addPet.with()
                         .withId(130)

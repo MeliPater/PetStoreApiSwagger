@@ -44,7 +44,7 @@ mvn package jetty:run
 
 > **To confirm** that the server is up and ready for use, a request to the following URL: http://localhost:8080/api/v3/openapi.json must return a `200 OK` response.
 
-# 1. API Test Automation
+# API Test Automation
 
 ### Built with
 This project use the following technologies and tools:
