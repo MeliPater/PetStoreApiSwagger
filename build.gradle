@@ -1,0 +1,43 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenCentral()
+}
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.9.8"
+        classpath "net.serenity-bdd:serenity-single-page-report:3.9.8"
+    }
+}
+
+ext {
+    serenity_version = '3.9.8'
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:${serenity_version}"
+    implementation "net.serenity-bdd:serenity-cucumber:${serenity_version}"
+    implementation "net.serenity-bdd:serenity-screenplay:${serenity_version}"
+    implementation "net.serenity-bdd:serenity-junit:${serenity_version}"
+
+
+    implementation "net.serenity-bdd:serenity-screenplay-rest:${serenity_version}"
+    implementation group: 'net.serenity-bdd', name: 'serenity-ensure', version: '3.9.8'
+}
+
+test.finalizedBy(aggregate)
+gradle.startParameter.continueOnFailure = true
